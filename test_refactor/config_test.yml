@@ -4,12 +4,12 @@ test_refactor:
   dataset_id: "DMP_TEST"
   table_name: "DMP_TEST_REFACTOR"
   truncate_on_write: False
-  sc_table_name: "DMP_ETL_DATA_VALIDATIONS"
-  sc_truncate_on_write: False
   etl:
     path: etl_resources
     script: etl_test_refactor # etl_test_refactor.sql
   sanity_checks:
+    table_name: "DMP_ETL_DATA_VALIDATIONS" # validar que existe
+    truncate_on_write: False
     path: sc_resources
     step_source:
       path: source

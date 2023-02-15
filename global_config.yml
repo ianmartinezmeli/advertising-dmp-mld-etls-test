@@ -1,0 +1,8 @@
+test:
+  secret_name: "GCP_ADV_CRED_TEST"
+  project_id: "ads-dmp-audiencias"
+  dataset_id: "DMP_TEST"
+prod:
+  secret_name: "GCP_ADV_CRED_PROD"
+  project_id: "ads-dmp-prod"
+  dataset_id: "DMP_PROD"

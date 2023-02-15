@@ -1,11 +1,10 @@
 test_refactor:
-  secret_name: "GCP_ADV_CRED_TEST"
-  project_id: "ads-dmp-audiencias"
-  dataset_id: "DMP_TEST"
-  table_name: "DMP_TEST_REFACTOR"
-  truncate_on_write: False
+  global_config:
+    path: ../global_config.yml
   etl:
     path: etl_resources
+    table_name: "DMP_TEST_REFACTOR"
+    truncate_on_write: False
     script: etl_test_refactor # etl_test_refactor.sql
   sanity_checks:
     table_name: "DMP_DQ_LOG" # validar que existe

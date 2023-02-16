@@ -1,10 +1,10 @@
 test_refactor:
   global_config:
-    path: ../global_config.yml
-  etl:
-    path: etl_resources
+    include: ../global_config.yml
     table_name: "DMP_TEST_REFACTOR"
     truncate_on_write: False
+  etl:
+    path: etl_resources
     script: etl_test_refactor # etl_test_refactor.sql
   sanity_checks:
     table_name: "DMP_DQ_LOG" # validar que existe

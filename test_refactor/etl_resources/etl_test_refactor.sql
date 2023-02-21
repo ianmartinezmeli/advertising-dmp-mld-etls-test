@@ -1,4 +1,4 @@
 SELECT
-    "HELLO WORLD ext",
-    CURRENT_DATETIME,
-    {{execution_id}}
+    "HELLO WORLD ext" as f0_,
+    CURRENT_DATETIME as f1_,
+    {{execution_id}} as execution_id

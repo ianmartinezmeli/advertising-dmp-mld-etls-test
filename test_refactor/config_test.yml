@@ -12,11 +12,11 @@ test_refactor:
     step_source:
       path: source
       steps:
+        - rule1  # query_rule1.sql // rules_rule1.sql
+        - rule2
     step_result:
       path: result
       steps:
-        - rule1  # query_rule1.sql // rules_rule1.sql
-        - rule2
   availability:
     path: avail_resources
     coverage: 0.95

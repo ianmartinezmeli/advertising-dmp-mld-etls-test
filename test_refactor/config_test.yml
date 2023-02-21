@@ -17,6 +17,7 @@ test_refactor:
     step_result:
       path: result
       steps:
+        - rule4
   availability:
     path: avail_resources
     coverage: 0.95

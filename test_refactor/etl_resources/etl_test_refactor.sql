@@ -1,3 +1,4 @@
 SELECT
     "HELLO WORLD",
-    CURRENT_DATETIME
+    CURRENT_DATETIME,
+    {{execution_id}}

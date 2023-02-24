@@ -1,4 +1,4 @@
 SELECT
-    "HELLO WORLD ext" as f0_,
-    CURRENT_DATETIME as f1_,
+    "HELLO WORLD ext" as test_message,
+    CURRENT_DATETIME as ds_datetime,
     {{execution_id}} as execution_id

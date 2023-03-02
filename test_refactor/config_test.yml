@@ -6,7 +6,7 @@ test_refactor:
     path: etl_resources
     script: etl_test_refactor # etl_test_refactor.sql
   sanity_checks:
-    table_name: "DMP_DQ_LOG" # validar que existe
+    table_name: "DMP_DQ_LOGS" # validar que existe
     truncate_on_write: False
     path: sc_resources
     step_source:

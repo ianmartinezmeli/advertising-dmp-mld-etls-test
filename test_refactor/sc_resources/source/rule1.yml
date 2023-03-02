@@ -1,8 +1,10 @@
 commons_expectations:
 - expectation_type: expect_column_values_to_not_be_null
+  severity: fatal
   columns: [test_message, ds_datetime]
 specific_expectations:
 - expectation_type: expect_column_values_to_be_in_set
+  severity: warning
   kwargs:
     column: test_message
     value_set: ['HELLO WORLD']

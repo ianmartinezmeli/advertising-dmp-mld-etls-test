@@ -17,4 +17,15 @@ specific_expectations:
   kwargs:
     column: qty_registros
 
+tracked_metrics:
+- metric_names: [mean]
+  columns: [qty_registros]
+- metric_names: [stdev]
+  columns: [qty_registros]
+- metric_names: [min,max]
+  columns: [qty_registros]
+- metric_names: [unique_value_count,proportion_of_unique_values,most_common_value,kl_divergence,row_count]
+  columns: [qty_registros]
+
+
 

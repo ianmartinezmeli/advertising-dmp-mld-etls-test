@@ -1,4 +1,4 @@
-commons_expectations:
+common_expectations:
 - expectation_type: expect_column_values_to_not_be_null
   severity: fatal
   columns: [test_message, ds_datetime]

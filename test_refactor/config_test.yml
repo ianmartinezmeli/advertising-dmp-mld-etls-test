@@ -21,7 +21,6 @@ test_refactor:
   availability:
     path: avail_resources
     script_check: valid_log_rules # valid_log_rules.sql
-    coverage_step_source: 0.95
-    coverage_step_result: 0.95
+    coverage: 0.95
     script_publish: publish_test_refactor # publish_test_refactor.sql
 

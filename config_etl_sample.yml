@@ -1,0 +1,26 @@
+test_refactor:
+  global_config: ../global_config.yml
+  etl:
+    table_name: "DMP_TEST_REFACTOR"
+    truncate_on_write: False
+    path: etl_resources
+    script: etl_test_refactor # etl_test_refactor.sql
+  sanity_checks:
+    table_name: "DMP_DQ_LOGS" # validar que existe
+    truncate_on_write: False
+    path: sc_resources
+    step_source:
+      path: source
+      steps:
+        - rule1  # query_rule1.sql // rules_rule1.sql
+        - rule2
+    step_result:
+      path: result
+      steps:
+        - rule4
+  availability:
+    path: avail_resources
+    script_check: valid_log_rules # valid_log_rules.sql
+    coverage_step_source: 0.95
+    coverage_step_result: 0.95
+    script_publish: publish_test_refactor # publish_test_refactor.sql

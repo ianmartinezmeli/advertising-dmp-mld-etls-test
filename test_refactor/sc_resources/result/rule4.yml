@@ -24,8 +24,6 @@ tracked_metrics:
   columns: [qty_registros]
 - metric_names: [min,max]
   columns: [qty_registros]
-- metric_names: [unique_value_count,proportion_of_unique_values,most_common_value,row_count]
-  columns: [qty_registros]
 
 
 

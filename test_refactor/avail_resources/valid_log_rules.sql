@@ -1,8 +1,8 @@
 SELECT
-  SUM(evaluated_expectations) evaluated_expectations,
-  SUM(successful_expectations) successful_expectations,
-  SUM(unsuccessful_expectations) unsuccessful_expectations,
+  sc_step, severity, status, count(column_name) qty
 FROM `{{ project_id }}.{{ dataset_id }}.{{ sc_table_name }}`
 WHERE
     execution_id = {{ execution_id }}
+    and expectation_type = 'expectation'
+    group by 1,2,3
     -- and sc_step = 'step_result'

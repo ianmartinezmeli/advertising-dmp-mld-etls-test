@@ -24,4 +24,3 @@ test_refactor:
     coverage_step_source: 0.95
     coverage_step_result: 0.95
     script_publish: publish_test_refactor # publish_test_refactor.sql
-

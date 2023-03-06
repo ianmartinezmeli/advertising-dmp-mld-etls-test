@@ -5,4 +5,3 @@ WHERE
     execution_id = {{ execution_id }}
     and expectation_type = 'expectation'
     group by 1,2,3
-    -- and sc_step = 'step_result'

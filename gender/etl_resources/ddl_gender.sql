@@ -1,14 +1,17 @@
-CREATE TABLE `{{ project_id }}.{{ dataset_id }}.DMP_GENDER_HISTORICAL_MVP`
-(
-  execution_id INT64,
-  ds DATE,
-  site STRING,
-  user_id INT64,
-  registered_gender STRING,
-  final_gender STRING
-)
-PARTITION BY ds
-CLUSTER BY execution_id, site, final_gender
-OPTIONS(
-  partition_expiration_days=7.0
+CREATE VIEW `{{ project_id }}.{{ dataset_id }}.DMP_GENDER_MVP`
+AS SELECT
+  site,
+  user_id,
+  registered_gender,
+  IFNULL(final_gender, "NI") as final_gender
+FROM `{{ project_id }}.{{ dataset_id }}.DMP_GENDER_HISTORICAL_MVP`
+WHERE execution_id = (
+    SELECT MAX(execution_id)
+        FROM
+          `{{ project_id }}.{{ dataset_id }}.DMP_DQ_WORKFLOW_CONTROL` t
+        WHERE
+          t.target_project='{{ project_id }}'
+          and t.target_dataset='{{ dataset_id }}'
+          and t.target_table = 'DMP_GENDER_HISTORICAL_MVP'
+          and t.status = 'SUCCESS'
 );

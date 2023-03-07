@@ -1,0 +1,29 @@
+common_expectations:
+- expectation_type: expect_column_values_to_not_be_null
+  columns: [qty_registros]
+specific_expectations:
+- expectation_type: expect_column_min_to_be_between
+  kwargs:
+    column: qty_registros
+    min_value: 2
+- expectation_type: expect_column_max_to_be_between
+  kwargs:
+    column: qty_registros
+    max_value: 5
+- expectation_type: expect_column_median_to_be_between
+  kwargs:
+    column: qty_registros
+- expectation_type: expect_column_mean_to_be_between
+  kwargs:
+    column: qty_registros
+
+tracked_metrics:
+- metric_names: [mean]
+  columns: [qty_registros]
+- metric_names: [stdev]
+  columns: [qty_registros]
+- metric_names: [min,max]
+  columns: [qty_registros]
+
+
+

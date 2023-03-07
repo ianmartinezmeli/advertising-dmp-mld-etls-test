@@ -1,0 +1,16 @@
+common_expectations:
+- expectation_type: expect_column_values_to_not_be_null
+  columns: [site, user_id]
+specific_expectations:
+- expectation_type: expect_column_values_to_be_in_set
+  kwargs:
+    column: site
+    value_set: ['MLA','MLB','MLM','MLU','MLC','MEC','MCO','MPE']
+- expectation_type: expect_column_values_to_be_in_set
+  kwargs:
+    column: registered_gender
+    value_set: ['F','M',null]
+- expectation_type: expect_column_values_to_be_in_set
+  kwargs:
+    column: final_gender
+    value_set: ['F','M',null]

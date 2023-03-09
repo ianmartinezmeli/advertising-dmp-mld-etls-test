@@ -15,5 +15,5 @@ specific_expectations:
     column: final_gender
     value_set: ['F','M',null]
 tracked_metrics:
-- metric_names: null_value_count
+- metric_names: null_value_count,table_row_count
   columns: final_gender

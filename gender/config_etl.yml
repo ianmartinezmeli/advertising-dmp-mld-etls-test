@@ -15,11 +15,13 @@ gender:
     step_result:
       path: result
       steps:
-        - rule
+        - rule1
+        - rule2
   availability:
     path: ../data_quality
     script_anomaly_detection: anomaly_detection
     script_check: availability # availability.sql
     coverage_step_source: 0.95
     coverage_step_result: 0.95
-
+    anomaly_z_score_threshold: 3
+    minimum_executions_anomaly_evaluation: 5

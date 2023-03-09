@@ -14,3 +14,6 @@ specific_expectations:
   kwargs:
     column: final_gender
     value_set: ['F','M',null]
+tracked_metrics:
+- metric_names: null_value_count
+  columns: final_gender

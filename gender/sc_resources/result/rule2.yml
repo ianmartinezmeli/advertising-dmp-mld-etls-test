@@ -7,9 +7,10 @@ specific_expectations:
     column: site
     value_set: ['MLA','MLB','MLM','MLU','MLC','MEC','MCO','MPE']
 - expectation_type: expect_column_values_to_be_in_set
+  severity: fatal
   kwargs:
     column: final_gender
-    value_set: ['F','M',null]
+    value_set: ['F']
 tracked_metrics:
 - metric_names: ['mean','median','stdev','min','max','sum','unique_value_count','proportion_of_unique_values']
   columns: [qty]

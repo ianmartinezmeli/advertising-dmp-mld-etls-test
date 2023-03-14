@@ -1,4 +1,4 @@
-gender:
+gender_mvp:
   global_config: ../global_config.yml
   etl:
     table_name: "DMP_GENDER_HISTORICAL_MVP"
